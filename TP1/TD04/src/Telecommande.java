@@ -46,6 +46,10 @@ public class Telecommande {
         throw new Error (" code non ecrit ");
     }
 
+    public int getLength(){
+        throw new Error (" code non ecrit ");
+    }
+
     /**
      * Methode toString qui renvoie l'affichage de la classe
      * @return String
