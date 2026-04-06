@@ -1,15 +1,21 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * La classe telecommande est une classe qui permet de stocker une liste de telemcommande
  */
 
 public class Telecommande {
 
+    /** Attributs */
+    ArrayList<Lampe> lampes;
+
     /**
      * Constructeur de la classe
      */
-//    public Telecommande(){
-//
-//    }
+    public Telecommande(){
+        lampes = new ArrayList<>();
+    }
 
 
     /**
@@ -17,7 +23,7 @@ public class Telecommande {
      * @param l est un objet Lampe
      */
     public void ajouterLampe(Lampe l){
-        throw new Error (" code non ecrit ");
+        lampes.add(l);
     }
 
 
@@ -26,7 +32,7 @@ public class Telecommande {
      * @param indiceLampe entier qui correspond a l'indice de la lampe
      */
     public void activerLampe(int indiceLampe){
-        throw new Error (" code non ecrit ");
+        lampes.get(indiceLampe).allumer();
     }
 
 
@@ -35,7 +41,7 @@ public class Telecommande {
      * @param indiceLampe entier qui correspond a l'indice de la lampe
      */
     public void desactiverLampe(int indiceLampe){
-        throw new Error (" code non ecrit ");
+        lampes.get(indiceLampe).eteindre();
     }
 
 
@@ -43,11 +49,8 @@ public class Telecommande {
      * Methode act lampe qui permet d'ajouter une lampe a partir de son indice dans la liste des telecommades
      */
     public void activerTout(){
-        throw new Error (" code non ecrit ");
-    }
-
-    public int getLength(){
-        throw new Error (" code non ecrit ");
+        Iterator i = lampes.iterator();
+        while (i.hasNext()) i.next().allumer();
     }
 
     /**
