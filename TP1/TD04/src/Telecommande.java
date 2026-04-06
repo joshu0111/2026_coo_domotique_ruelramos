@@ -49,7 +49,7 @@ public class Telecommande {
      * Methode act lampe qui permet d'ajouter une lampe a partir de son indice dans la liste des telecommades
      */
     public void activerTout(){
-        Iterator i = lampes.iterator();
+        Iterator<Lampe> i = lampes.iterator();
         while (i.hasNext()) i.next().allumer();
     }
 
