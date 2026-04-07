@@ -9,6 +9,7 @@ public class Telecommande {
 
     /** Attributs */
     ArrayList<Lampe> lampes;
+    ArrayList<Hifi> hifis;
 
     /**
      * Constructeur de la classe
@@ -48,17 +49,48 @@ public class Telecommande {
     /**
      * Methode act lampe qui permet d'ajouter une lampe a partir de son indice dans la liste des telecommades
      */
-    public void activerTout(){
+    public void activerToutLampe(){
         Iterator<Lampe> i = lampes.iterator();
         while (i.hasNext()) i.next().allumer();
     }
 
+
+    /**
+     * Methode qui permet d'activer une chaine hi-fi a partir de son indice dans la liste des chaines hi-fi
+     * @param indiceHifi
+     */
+    public void activerHifi(int indiceHifi){
+        hifis.get(indiceHifi).allumer();
+    }
+
+    /**
+     * Methode qui permet de desactiver une chaine hi-fi
+     * @param indiceHifi
+     */
+    public void desactiverHifi(int indiceHifi){
+        hifis.get(indiceHifi).eteindre();
+    }
+
+
+    /**
+     * Methode qui permet d'activer toutes les chaines hi-fi
+     */
+    public void activerToutHifi(){
+        Iterator<Hifi> i = hifis.iterator();
+        while (i.hasNext()) i.next().allumer();
+    }
+
+
     /**
      * Methode toString qui renvoie l'affichage de la classe
+     *
      * @return String
      */
     @Override
     public String toString() {
-        return "Telecommande{}";
+        return "Telecommande{" +
+                "hifis=" + hifis +
+                ", lampes=" + lampes +
+                '}';
     }
 }
