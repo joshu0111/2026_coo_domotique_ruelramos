@@ -49,7 +49,7 @@ public class Telecommande {
      * Methode activerTout qui permet d'ajouter un peripherique a partir de son indice dans la liste des telecommades
      */
     public void activerTout(){
-        Iterator<Peripherique> i = pheripheriques.iterator();
+        Iterator<Peripherique> i = peripheriques.iterator();
         while (i.hasNext()) i.next().allumer();
     }
 
