@@ -5,7 +5,7 @@
  * prive et manipulable par les methodes allumer et eteindre
  */
 
-public class Lampe implements peripherique{
+public class Lampe implements Peripherique{
 
 	/**
 	 * nom de la lampe
