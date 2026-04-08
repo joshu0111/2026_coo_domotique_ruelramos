@@ -54,3 +54,12 @@ dont votre nouvelle conception y répond.</summary>
 
 La nouvelle conception y repond en introduisant une interface qui permet de gerer (Allumer/Eteindre/Allumer tout) pour nimporte quel objet implementant peripherique  
 </details>
+
+## Q13
+
+<details>
+  <summary>Expliquer ce qu’il faut faire pour ajouter un nouvel appareil manipulable par la
+telecommande (par exemple télévision).</summary>
+
+Il suffit d'instancier un objet qui implement l'interface Peripherique et de l'ajouter la telecommande avec la methode ajouterPeripherique.
+</details>
