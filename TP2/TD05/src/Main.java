@@ -40,6 +40,12 @@ public class Main {
 
 		Hifi h2 = new Hifi();
 		t.ajouterPeripherique(h2);
+
+		Television t1 = new Television();
+		t.ajouterPeripherique(t1);
+
+		Television t2 = new Television();
+		t.ajouterPeripherique(t2);
 	}
 
 }
