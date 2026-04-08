@@ -1,3 +1,5 @@
+![img.png](img/img.png)
+
 ![Photo du diagramme uml](./img/photo-uml_1.jpg)
 
 
@@ -40,4 +42,15 @@ eteindre et allumer mais augmenterSon ou baisserSon</summary>
 
 Les fleches partent de Telecommande et s'arretent à Hifi (<|--)
 Cela implique que lorsqu'on modife la classe Hifi on doit veuillez a ne pas avoir generer d'erreur dans la classe Telecomande en modifiant la classe Hifi. 
+</details>
+
+
+
+## Q12
+
+<details>
+  <summary>Réfléchir aux questions posées précédemment (Q1 à Q5) et expliquer la manière
+dont votre nouvelle conception y répond.</summary>
+
+La nouvelle conception y repond en introduisant une interface qui permet de gerer (Allumer/Eteindre/Allumer tout) pour nimporte quel objet implementant peripherique  
 </details>
