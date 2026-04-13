@@ -28,4 +28,9 @@ public class ChemineeAdapterPeripherique implements Peripherique{
     public void eteindre(){
         this.ch.changerIntensite(0);
     }
+
+    @Override
+    public String toString() {
+        return this.ch.toString();
+    }
 }
