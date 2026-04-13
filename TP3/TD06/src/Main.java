@@ -5,16 +5,10 @@ public class Main {
 	{
 		Telecommande t=new Telecommande();
 
-
-		Lampe l1=new Lampe("Lampe1");
-		t.ajouterPeripherique(l1);
-
-		/****** A COMPLETER ******/
-		// TODO
+		t.ajouterPeripherique(new Lampe("Lampe1"));
+		t.ajouterPeripherique(new Hifi());
+		t.ajouterPeripherique(new ChemineeAdapterPeripherique());
 
 		TelecommandeGraphique tg=new TelecommandeGraphique(t);
-
-
 	}
-	
 }
