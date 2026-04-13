@@ -38,9 +38,10 @@ class Telecommande {
     - peripheriques: ArrayList<Peripherique>
     + Telecommande()
     + ajouterPeripherique(p: Peripherique): void
-    + activerPeripheriques(indicePeripherique: int): void
+    + activerPeripherique(indicePeripherique: int): void
     + desactiverPeripherique(indicePeripherique: int): void
     + activerTout(): void
+    + getNombre() : int
     + toString(): String
 }
 
@@ -56,6 +57,7 @@ class ChemineeAdapterPeripherique{
     + ch : Cheminee
     + allumer(): void
     + eteindre(): void
+    + toString() : String
 }
 
 ' Relations d'implémentation
