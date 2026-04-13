@@ -80,4 +80,30 @@ public class TelecommandeTest {
         }, "L'activation d'un indice inexistant ne devrait pas lever d'erreur fatale non gérée.");
     }
 
+    @Test
+    void testAjouterPeripheriqueChemineeAdapterPeripherique(){
+        // 1. Preparation
+        Telecommande t = new Telecommande();
+        ChemineeAdapterPeripherique c = new ChemineeAdapterPeripherique();
+
+        // 2. Execution
+        t.ajouterPeripherique(c);
+
+        // 3. Verification
+        assertTrue(t.toString().contains("cheminee: 0"));
+    }
+
+    @Test
+    void testActiverPeripheriqueChemineeAdapterPeripherique(){
+        // 1. Preparation
+        Telecommande t = new Telecommande();
+        t.ajouterPeripherique(new ChemineeAdapterPeripherique());
+
+        // 2. Execution
+        t.activerPeripherique(0);
+
+        // 3. Verification
+        assertTrue(t.toString().contains("cheminee: 10"));
+    }
+
 }
