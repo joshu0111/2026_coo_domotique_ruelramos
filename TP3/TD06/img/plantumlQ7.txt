@@ -62,6 +62,7 @@ class ChemineeAdapterPeripherique{
 
 class ThermostatAdapterPeripherique{
     - th : Thermostat
+    - g : Graphics
     + allumer() : void
     + eteindre() : void
     + toString() : String

@@ -94,7 +94,7 @@ public class TelecommandeTest {
     }
 
     @Test
-    void testActiverPer ipheriqueChemineeAdapterPeripherique(){
+    void testActiverPeripheriqueChemineeAdapterPeripherique(){
         // 1. Preparation
         Telecommande t = new Telecommande();
         t.ajouterPeripherique(new ChemineeAdapterPeripherique());
