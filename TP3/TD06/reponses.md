@@ -6,3 +6,8 @@
 >Une fois que vos idées sont claires, écrivez un diagramme de classe qui présente
 votre conception avec l’ensemble des classes disponibles depuis le début des TP
 >> ![umlQ2.png](img/umlQ2.png)
+
+## Q7 
+> Dessiner un diagramme de classe qui propose une solution de type Adapter pour
+intégrer la classe Thermostat
+>>![umlQ7.png](img/umlQ7.png)

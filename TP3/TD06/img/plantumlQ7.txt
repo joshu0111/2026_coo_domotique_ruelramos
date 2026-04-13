@@ -1,0 +1,87 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+skinparam shadowing false
+
+interface Peripherique {
+    + allumer(): void
+    + eteindre(): void
+}
+
+class Hifi {
+    - son: int
+    + allumer(): void
+    + eteindre(): void
+    + toString(): String
+}
+
+class Lampe {
+    - nom: String
+    - allume: boolean
+    + Lampe(paramNom: String)
+    + allumer(): void
+    + eteindre(): void
+    + isAllume(): boolean
+    + toString(): String
+}
+
+class Television {
+    - etat: boolean
+    + allumer(): void
+    + eteindre(): void
+    + estAllume(): boolean
+    + toString(): String
+}
+
+class Telecommande {
+    - peripheriques: ArrayList<Peripherique>
+    + Telecommande()
+    + ajouterPeripherique(p: Peripherique): void
+    + activerPeripherique(indicePeripherique: int): void
+    + desactiverPeripherique(indicePeripherique: int): void
+    + activerTout(): void
+    + getNombre() : int
+    + toString(): String
+}
+
+class Cheminee{
+    - intensite : int
+    + Cheminee()
+    + changerIntensite() : void
+    + getLumiere() : int
+    + toString() : String
+}
+
+class ChemineeAdapterPeripherique{
+    + ch : Cheminee
+    + allumer(): void
+    + eteindre(): void
+    + toString() : String
+}
+
+class ThermostatAdapterPeripherique{
+    + th : Thermostat
+    + allumer() : void
+    + eteindre() : void
+    + toString() : String
+}
+
+class Thermostat{
+    + monterTemperature : void
+    + baisserTemperature : void
+}
+
+' Relations d'implémentation
+Peripherique <|.. Hifi
+Peripherique <|.. Lampe
+Peripherique <|.. Television
+Peripherique <|.. ChemineeAdapterPeripherique
+Peripherique <|.. ThermostatAdapterPeripherique
+
+' Relation de composition/agrégation
+Telecommande "1" o-- "*" Peripherique : contient >
+ChemineeAdapterPeripherique "1" --> "1" Cheminee
+ThermostatAdapterPeripherique "1" --> "1" Thermostat
+
+@enduml
