@@ -81,7 +81,7 @@ public class TelecommandeGraphique {
 		boutonOff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("==== eteint " + num + "====");
-				tele.desactiverAppareil(num);
+				tele.desactiverPeripherique(num);
 				System.out.println(tele);
 			}
 		});
@@ -101,7 +101,7 @@ public class TelecommandeGraphique {
 		boutonOn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("==== allume " + num + "====");
-				tele.activerAppareil(num);
+				tele.activerPeripherique(num);
 				System.out.println(tele);
 			}
 		});

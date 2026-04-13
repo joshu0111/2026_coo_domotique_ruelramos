@@ -31,8 +31,14 @@ public class Telecommande {
      * Methode qui active un peripherique a parir de son indice
      * @param indicePeripherique entier qui correspond a l'indice du peripherique
      */
-    public void activerPeripheriques(int indicePeripherique){
-        peripheriques.get(indicePeripherique).allumer();
+    public void activerPeripherique
+    (int indicePeripherique){
+        try {
+            peripheriques.get(indicePeripherique).allumer();
+        }
+        catch (Exception e){
+            System.out.println("Il y a un probleme avec le peripherique que vous tentez d'activer");
+        }
     }
 
 
@@ -53,6 +59,13 @@ public class Telecommande {
         while (i.hasNext()) i.next().allumer();
     }
 
+    /**
+     * Methode getNombre qui permet de recuperer le nombre de telecommande dans la liste de la telecommande
+     * @return int
+     */
+    public int getNombre(){
+        return this.peripheriques.size();
+    }
 
     @java.lang.Override
     public java.lang.String toString() {
