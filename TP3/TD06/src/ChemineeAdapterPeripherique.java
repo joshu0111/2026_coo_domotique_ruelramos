@@ -9,10 +9,9 @@ public class ChemineeAdapterPeripherique implements Peripherique{
 
     /**
      * Consturcteur de la classe
-     * @param c
      */
-    public ChemineeAdapterPeripherique(Cheminee c){
-        this.ch = c;
+    public ChemineeAdapterPeripherique(){
+        this.ch = new Cheminee();
     }
 
     /**
