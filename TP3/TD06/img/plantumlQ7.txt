@@ -54,14 +54,14 @@ class Cheminee{
 }
 
 class ChemineeAdapterPeripherique{
-    + ch : Cheminee
+    - ch : Cheminee
     + allumer(): void
     + eteindre(): void
     + toString() : String
 }
 
 class ThermostatAdapterPeripherique{
-    + th : Thermostat
+    - th : Thermostat
     + allumer() : void
     + eteindre() : void
     + toString() : String
